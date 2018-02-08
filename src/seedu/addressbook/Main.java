@@ -14,6 +14,7 @@ import seedu.addressbook.storage.StorageFile;
 import seedu.addressbook.storage.StorageFile.InvalidStorageFilePathException;
 import seedu.addressbook.storage.StorageFile.StorageOperationException;
 import seedu.addressbook.ui.TextUi;
+import static seedu.addressbook.common.Messages.MESSAGE_READ_ONLY_STORAGE_FILE;
 
 
 /**
@@ -23,7 +24,7 @@ import seedu.addressbook.ui.TextUi;
 public class Main {
 
     /** Version info of the program. */
-    public static final String VERSION = "AddressBook Level 2 - Version 1.0";
+    private static final String VERSION = "AddressBook Level 2 - Version 1.0";
 
     private TextUi ui;
     private StorageFile storage;
@@ -38,7 +39,7 @@ public class Main {
     }
 
     /** Runs the program until termination.  */
-    public void run(String[] launchArgs) {
+    private void run(String[] launchArgs) {
         start(launchArgs);
         runCommandLoopUntilExitCommand();
         exit();
@@ -111,6 +112,9 @@ public class Main {
             CommandResult result = command.execute();
             storage.save(addressBook);
             return result;
+        }catch (StorageOperationException e) {
+            ui.showToUser(MESSAGE_READ_ONLY_STORAGE_FILE);
+            return new CommandResult("");
         } catch (Exception e) {
             ui.showToUser(e.getMessage());
             throw new RuntimeException(e);
