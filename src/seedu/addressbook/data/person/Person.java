@@ -42,7 +42,9 @@ public class Person implements ReadOnlyPerson {
     }
 
     @Override
-    public DateOfBirth getDob() {return dob;}
+    public DateOfBirth getDob() {
+        return dob;
+    }
 
     @Override
     public Phone getPhone() {
