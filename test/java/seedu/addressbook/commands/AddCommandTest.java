@@ -39,6 +39,15 @@ public class AddCommandTest {
     }
 
     @Test
+    public void addCommand_invalidDateOfBirth_throwsException() {
+        final String[] invalidDateOfBirth = { "", " ", "1234-5678", "[]\\[;]", "abc", "a123", "+651234" };
+        for (String dob : invalidDateOfBirth) {
+            assertConstructingInvalidAddCmdThrowsException(Name.EXAMPLE, dob, true, Phone.EXAMPLE, false, Email.EXAMPLE, true,
+                    Address.EXAMPLE, false, EMPTY_STRING_LIST);
+        }
+    }
+
+    @Test
     public void addCommand_invalidPhone_throwsException() {
         final String[] invalidNumbers = { "", " ", "1234-5678", "[]\\[;]", "abc", "a123", "+651234" };
         for (String number : invalidNumbers) {
@@ -106,7 +115,7 @@ public class AddCommandTest {
         // individual fields that compare privacy to simplify this
         assertEquals(Name.EXAMPLE, p.getName().fullName);
         assertEquals(DateOfBirth.EXAMPLE, p.getDob().value);
-        assertTrue(p.getDob().isPrivate());
+        assertFalse(p.getDob().isPrivate());
         assertEquals(Phone.EXAMPLE, p.getPhone().value);
         assertTrue(p.getPhone().isPrivate());
         assertEquals(Email.EXAMPLE, p.getEmail().value);
