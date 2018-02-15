@@ -50,9 +50,20 @@
   list
   add Esther Potato p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy
   list
+  add alan p/666666 e/alan@gmail.com a/666, abc street
+  list
+  add Cheryl p/777777 e/cheryl@gmail.com a/777, xyz street
+  list
 
   # should not allow adding duplicate persons
   add Esther Potato p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy
+
+##########################################################
+# test sort persons command
+##########################################################
+
+  # should sort the list in alphabetically ascending order (case insensitive)
+  sort
 
 ##########################################################
 # test view/viewall persons command
