@@ -1,11 +1,11 @@
 package seedu.addressbook.commands;
 
 import seedu.addressbook.data.person.ReadOnlyPerson;
-
+import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Sorts all the people in AddressBook by their names in alphabetically ascending order
+ * Sorts all the people in AddressBook by their names in alphabetically ascending order (case insensitive)
  */
 
 public class SortCommand extends Command {
@@ -16,11 +16,21 @@ public class SortCommand extends Command {
 
     @Override
     public CommandResult execute() {
-        List<ReadOnlyPerson> allPersons = sortByName(addressBook.getAllPersons().immutableListView());
-        return new CommandResult(getMessageForPersonListShownSummary(allPersons), allPersons);
+        List<ReadOnlyPerson> sortPersons = sortByName(addressBook.getAllPersons().immutableListView());
+        return new CommandResult(getMessageForPersonListShownSummary(sortPersons), sortPersons);
     }
 
-    private List<ReadOnlyPerson> sortByName(List<ReadOnlyPerson> readOnlyPeople) {
-        return readOnlyPeople;
+
+    /**
+     * Sorts the whole list of people in alphabetically ascending order (case insensitive)
+     *
+     * @param allPersons list of people
+     * @return sorted list
+     */
+    private List<ReadOnlyPerson> sortByName(List<ReadOnlyPerson> allPersons) {
+        List<ReadOnlyPerson> sortPersons = new ArrayList<>();
+        sortPersons.addAll(allPersons);
+        sortPersons.sort((person1, person2) -> + person1.getName().toString().compareToIgnoreCase(person2.getName().toString()));
+        return sortPersons;
     }
 }
