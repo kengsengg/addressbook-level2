@@ -4,6 +4,8 @@ import seedu.addressbook.data.person.ReadOnlyPerson;
 import java.util.ArrayList;
 import java.util.List;
 
+import static seedu.addressbook.common.Messages.MESSAGE_LIST_SORTED;
+
 /**
  * Sorts all the people in AddressBook by their names in alphabetically ascending order (case insensitive)
  */
@@ -17,9 +19,8 @@ public class SortCommand extends Command {
     @Override
     public CommandResult execute() {
         List<ReadOnlyPerson> sortPersons = sortByName(addressBook.getAllPersons().immutableListView());
-        return new CommandResult(getMessageForPersonListShownSummary(sortPersons), sortPersons);
+        return new CommandResult(MESSAGE_LIST_SORTED, sortPersons);
     }
-
 
     /**
      * Sorts the whole list of people in alphabetically ascending order (case insensitive)
