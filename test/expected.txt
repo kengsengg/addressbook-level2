@@ -137,7 +137,7 @@
 || 
 || 5 persons listed!
 || ===================================================
-|| Enter command: || [Command entered:  add alan p/666666 e/alan@gmail.com a/666 abc street t/friends]
+|| Enter command: || [Command entered:  add alan p/666666 e/alan@gmail.com a/666, abc street t/friends]
 || New person added: alan Phone: 666666 Email: alan@gmail.com Address: 666, abc street Tags: [friends]
 || ===================================================
 || Enter command: || [Command entered:  list]
@@ -146,11 +146,11 @@
 || 	3. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
 || 	4. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
 || 	5. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
-|| 	6. alan Phone: 666666 Email: alan@gmail.com Address: 666 abc street Tags: [friends]
-||
+|| 	6. alan Phone: 666666 Email: alan@gmail.com Address: 666, abc street Tags: [friends]
+|| 
 || 6 persons listed!
 || ===================================================
-|| Enter command: || [Command entered:  add Cheryl p/777777 e/cheryl@gmail.com a/777 xyz street t/friends]
+|| Enter command: || [Command entered:  add Cheryl p/777777 e/cheryl@gmail.com a/777, xyz street t/friends]
 || New person added: Cheryl Phone: 777777 Email: cheryl@gmail.com Address: 777, xyz street Tags: [friends]
 || ===================================================
 || Enter command: || [Command entered:  list]
@@ -159,9 +159,9 @@
 || 	3. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
 || 	4. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
 || 	5. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
-|| 	6. alan Phone: 666666 Email: alan@gmail.com Address: 666 abc street Tags: [friends]
-|| 	7. Cheryl Phone: 777777 Email: cheryl@gmail.com Address: 777 xyz street Tags: [friends]
-||
+|| 	6. alan Phone: 666666 Email: alan@gmail.com Address: 666, abc street Tags: [friends]
+|| 	7. Cheryl Phone: 777777 Email: cheryl@gmail.com Address: 777, xyz street Tags: [friends]
+|| 
 || 7 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  add Esther Potato p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy]
@@ -169,13 +169,13 @@
 || ===================================================
 || Enter command: || [Command entered:  sort]
 || 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: [school]
-|| 	2. alan Phone: 666666 Email: alan@gmail.com Address: 666 abc street Tags: [friends]
+|| 	2. alan Phone: 666666 Email: alan@gmail.com Address: 666, abc street Tags: [friends]
 || 	3. Betsy Choo Tags: [secretive]
 || 	4. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
-|| 	5. Cheryl Phone: 777777 Email: cheryl@gmail.com Address: 777 xyz street Tags: [friends]
+|| 	5. Cheryl Phone: 777777 Email: cheryl@gmail.com Address: 777, xyz street Tags: [friends]
 || 	6. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
 || 	7. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
-||
+|| 
 || AddressBook has been sorted!
 || ===================================================
 || Enter command: || [Command entered:  view]
