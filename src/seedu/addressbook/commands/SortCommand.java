@@ -13,7 +13,7 @@ import static seedu.addressbook.common.Messages.MESSAGE_LIST_SORTED;
 public class SortCommand extends Command {
     public static final String COMMAND_WORD = "sort";
 
-    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Sorts the entire list of people in AddressBook by their names in alphabetically ascending order. \n "
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Sorts the entire list of people in AddressBook by their names in alphabetically ascending order (case insensitive).\n"
             + "Example: " + COMMAND_WORD;
 
     @Override
